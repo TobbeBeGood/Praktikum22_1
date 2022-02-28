@@ -8,7 +8,7 @@ public class SchweizfahrplanApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SchweizfahrplanApplication.class, args);
-		System.out.println("Moin Felix");
+		System.out.println("Start erfolgreich");
 
 	}
 
