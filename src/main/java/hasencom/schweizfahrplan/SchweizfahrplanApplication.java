@@ -9,7 +9,7 @@ public class SchweizfahrplanApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SchweizfahrplanApplication.class, args);
 		System.out.println("Start Erfolgreich");
-		System.out.println("Gut gemacht");
+		System.out.println("Gut gemacht!");
 
 	}
 
