@@ -2,6 +2,7 @@ package hasencom.schweizfahrplan.service;
 
 import hasencom.schweizfahrplan.controller.Controller;
 import hasencom.schweizfahrplan.pojo.Userinput;
+import org.apache.catalina.User;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -11,11 +12,12 @@ public class Service {
     public String getConnection(Userinput userinput){
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(
-                URI.create("http://transport.opendata.ch/v1/connections?from=Lausanne&to=Genève"))
-                .header("accept","applicatin/json")
+                URI.create("http://transport.opendata.ch/v1/connections?from="+ userinput.getStart_stadt()+"to="+userinput.getZiel_stadt()))
+                .header("accept","application/json")
                 .build();
         return "";
     }
+
     //Methode die HTTP GET Request an SChweiz API sendet ✘
     // Parameter ist Eingabe des Nutzers (Userinput) ✔
     //GET http://transport.opendata.ch/v1/connections?from=Lausanne&to=Genève ✘
