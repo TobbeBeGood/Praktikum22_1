@@ -16,7 +16,7 @@ public class Controller {
         model.addAttribute("something","Schweiz Fahrplan");
         Service service = new Service();
         String result=service.getConnection();
-        System.out.println("Seite /Connection auferufen");
+        System.out.println("Seite /Connection aufgerufen");
         return "connection";
     }
     @GetMapping("/")
