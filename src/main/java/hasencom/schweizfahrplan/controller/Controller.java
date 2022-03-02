@@ -19,7 +19,7 @@ public class Controller {
         System.out.println("Seite /Connection auferufen");
         return "connection";
     }
-    @GetMapping()
+    @GetMapping("/")
     String getFahrplan(Model model) {
         model.addAttribute("something","test message");
         model.addAttribute("fahrplan.html");
