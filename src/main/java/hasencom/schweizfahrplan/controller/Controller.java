@@ -12,11 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @org.springframework.stereotype.Controller
 public class Controller {
     @GetMapping("/connection")
-    public String index() throws Exception {
+    public String index(Model model) throws Exception {
+        model.addAttribute("something","Schweiz Fahrplan");
         Service service = new Service();
-         String result=service.getConnection();
-
-        return result;
+        String result=service.getConnection();
+        System.out.println("Seite /Connection auferufen");
+        return "connection";
     }
     @GetMapping()
     String getFahrplan(Model model) {
