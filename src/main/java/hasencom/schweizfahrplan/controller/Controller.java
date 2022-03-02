@@ -22,7 +22,7 @@ public class Controller {
     String getFahrplan(Model model) {
         model.addAttribute("something","test message");
         model.addAttribute("fahrplan.html");
-        System.out.println("TEST");
+        System.out.println("Seite Aufgerufen");
         return "fahrplan";
     }
 
