@@ -3,6 +3,7 @@ package hasencom.schweizfahrplan.controller;
 
 import hasencom.schweizfahrplan.pojo.Userinput;
 import hasencom.schweizfahrplan.service.Service;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +17,13 @@ public class Controller {
          String result=service.getConnection();
 
         return result;
+    }
+    @GetMapping()
+    String getFahrplan(Model model) {
+        model.addAttribute("something","test message");
+        model.addAttribute("fahrplan.html");
+        System.out.println("TEST");
+        return "fahrplan";
     }
 
 
