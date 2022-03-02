@@ -17,7 +17,7 @@ public class Controller {
         Service service = new Service();
         String result=service.getConnection();
         System.out.println("Seite /Connection aufgerufen");
-        return "connection";
+        return result;
     }
     @GetMapping("/")
     String getFahrplan(Model model) {
