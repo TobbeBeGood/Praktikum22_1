@@ -26,6 +26,12 @@ public class Controller {
         System.out.println("Seite Aufgerufen");
         return "fahrplan";
     }
+    @GetMapping("/impressum")
+    String getImpressum(Model model) {
+        model.addAttribute("impressum.html");
+        System.out.println("Seite /impressum Aufgerufen");
+        return "impressum.html";
+    }
 
 
     //GET-Endpoint "/connection"
