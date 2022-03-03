@@ -1,23 +1,27 @@
 package hasencom.schweizfahrplan.controller;
 
 
+import hasencom.schweizfahrplan.pojo.APIrespond;
 import hasencom.schweizfahrplan.pojo.Userinput;
 import hasencom.schweizfahrplan.service.Service;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @org.springframework.stereotype.Controller
 public class Controller {
+
+
     @GetMapping("/connection")
-    public String index(Model model) throws Exception {
-        model.addAttribute("something","Schweiz Fahrplan");
+    public ResponseEntity<?> getJSON(Userinput input) throws Exception {
+
         Service service = new Service();
-        String result=service.getConnection();
-        System.out.println("Seite /Connection aufgerufen");
-        return result;
+        APIrespond response=new APIrespond();
+        response=service.getConnection(input.getStart_stadt(),input.getZiel_stadt());
+        return new ResponseEntity(response, HttpStatus.OK);
     }
     @GetMapping("/")
     String getFahrplan(Model model) {

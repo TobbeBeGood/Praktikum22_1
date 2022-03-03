@@ -1,12 +1,18 @@
 package hasencom.schweizfahrplan.pojo;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.catalina.User;
 
 import java.lang.reflect.Constructor;
 
+
 public class Userinput {
+
+
     private String start_stadt;
+
+
     private String ziel_stadt;
 
     public void setStart_stadt(String start_stadt) {
