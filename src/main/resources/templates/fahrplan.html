@@ -45,11 +45,11 @@
         .impressum:hover{
             text-decoration: none;
         }
+
     </style>
 </head>
 <body>
 <header class="header">
-
     <div class="logodiv"> <img src="https://hansecom.com/wbx-assets/template/img/hansecom-logo.png?1609770838" class="float-start"> </div>
     <div><h1 class="headline" th:text="${something}"/></div>
     <div class="logodiv2"> <img src="https://hansecom.com/wbx-assets/template/img/hansecom-logo.png?1609770838" class="float-end"> </div>
@@ -64,24 +64,22 @@
   height: 200px;
   justify-content: center;
   align-items: center;" class="container mt-5 ">
-    <a style="height: 100px; width: 100% " class="btn btn-primary" href="/connection" role="button">Fahrplan</a>
+    <a style="height: 100px; width: 100%; justify-content: center; align-item: center" class="btn btn-primary" href="/fahrplan" role="button">Fahrplan</a>
 </div>
 <div class="container mt-5 p-4 bg-white" style="height: 400px">
     <div class="row">
     </div>
 </div>
 
-
 <footer style="max-height: 200px" class="mt-5 p-4 bg-dark text-white text-center">
-    <div style="max-width: 100%; display: flex; justify-content: center; align-items: center;" class="container bg-dark row">
+    <div style="max-width: 100%; display: flex; justify-content: center;" class="container bg-dark row">
         <div style="width: 100px; max-height: 50px" class="container bg-dark text-white">
-            <a class="impressum" style="color: white
-" href="/impressum">Impressum</a>
+            <a class="impressum" style="color: white" href="/impressum">Impressum</a>
         </div>
-        <div style="width: 100px; max-height: 50px" class="container bg-">
+        <div style="width: 100px; max-height: 50px" class="container bg-dark">
             Links
         </div>
-        <div style="width: 100px; max-height: 50px; text-align: top;" class="container bg-">
+        <div style="width: 100px; max-height: 100px;" class="container bg-white text-align-top">
             Links <br> hi
         </div>
     </div>

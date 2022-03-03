@@ -36,6 +36,13 @@ public class Controller {
         System.out.println("Seite /impressum Aufgerufen");
         return "impressum.html";
     }
+    @GetMapping("/fahrplan")
+    String getFormular(Model model) {
+        model.addAttribute("something","Schweiz Fahrplan");
+        model.addAttribute("formular.html");
+        System.out.println("Seite /formular Aufgerufen");
+        return "formular.html";
+    }
 
 
     //GET-Endpoint "/connection"
