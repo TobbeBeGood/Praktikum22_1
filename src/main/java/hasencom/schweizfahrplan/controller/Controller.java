@@ -21,7 +21,7 @@ public class Controller {
     }
     @GetMapping("/")
     String getFahrplan(Model model) {
-        model.addAttribute("something","test message");
+        model.addAttribute("something","Schweiz Fahrplan");
         model.addAttribute("fahrplan.html");
         System.out.println("Seite Aufgerufen");
         return "fahrplan";
