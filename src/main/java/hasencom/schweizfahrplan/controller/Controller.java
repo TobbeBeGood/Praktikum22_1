@@ -40,6 +40,7 @@ public class Controller {
     String getFormular(Model model) {
         model.addAttribute("something","Schweiz Fahrplan");
         model.addAttribute("formular.html");
+        model.addAttribute("start_stadt","ziel_stadt");
         System.out.println("Seite /formular Aufgerufen");
         return "formular.html";
     }
