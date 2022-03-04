@@ -33,16 +33,16 @@
     <div class="logodiv2"> <img src="https://hansecom.com/wbx-assets/template/img/hansecom-logo.png?1609770838" class="float-end"> </div>
     </div>
 </header>
-<h1 style="text-align: center" th:text="text"></h1>
-<hr>test</hr>
-<form style="width: 80%; margin: auto;" class="mb-3">
+<h1 style="text-align: center" th:text="Suche"></h1>
+
+<form th:action="@{/connection}" style="width: 80%; margin: auto;" class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Start</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Start Stadt" name="start_stadt">
     <br>
     <label for="exampleFormControlInput1" class="form-label">Ziel</label>
     <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Ziel Stadt" name="ziel_stadt">
     <br>
-    <input type="submit" class="btn btn-primary">
+    <input  th:href="@{/connection}" type="submit" class="btn btn-primary">
 </form>
 
 <div class="container mt-5 p-4 bg-white" style="border: 3px dark; height: 400px">
